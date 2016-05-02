@@ -37,7 +37,9 @@ $app->register(Hzone\VkGeoCollector\VkGeoCollectorServiceProvider::class);
 
 ### Both Lumen and Laravel
 ```
-php artisan vendor:publish --provider="Hzone/VkGeoCollector/VkGeoCollectorServiceProvider"
+php artisan vendor:publish --provider="Hzone\VkGeoCollector\VkGeoCollectorServiceProvider" --tag="config"
+php artisan vendor:publish --provider="Hzone\VkGeoCollector\VkGeoCollectorServiceProvider" --tag="migrations"
+php artisan migrate
 ```
 
 ## Usage
