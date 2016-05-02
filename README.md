@@ -21,7 +21,7 @@ or
 
 `bootstrap/app.php`
 ```php
-$app->register(Hzone\VkGeoCollector\Providers\VkGeoCollectorServiceProvider::class);
+$app->register(Hzone\VkGeoCollector\VkGeoCollectorServiceProvider::class);
 ```
 
 ### Laravel 5+
@@ -30,10 +30,15 @@ $app->register(Hzone\VkGeoCollector\Providers\VkGeoCollectorServiceProvider::cla
 ```php
 'providers' => [
     //....
-    Hzone\VkGeoCollector\Providers\VkGeoCollectorServiceProvider::class,
+    Hzone\VkGeoCollector\VkGeoCollectorServiceProvider::class,
     //....
 ],
 ```
+
+### Both Lumen and Laravel
+(!!! manually !!!)
+Take the migrations from /vendor/h-zone/vk-geo-collector/database/migrations and apply it.
+Take the configuration from /vendor/h-zone/vk-geo-collector/config
 
 ## Usage
 ```sh
