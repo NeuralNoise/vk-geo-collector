@@ -25,12 +25,12 @@
 	},
 	"autoload":{
 		"psr-4":{
-			"Hzone\\CleanupCommands\\":"src/"
+			"Hzone\\VkGeoCollector\\":"src/"
 		}
 	},
 	"autoload-dev":{
 		"psr-4":{
-			"Hzone\\CleanupCommands\\":"src/"
+			"Hzone\\VkGeoCollector\\":"src/"
 		}
 	},
 	"require":{
