@@ -15,7 +15,7 @@ class CreateVkGeoCitiesTable extends Migration
 		Schema::create( 'vk_geo_cities', function ( Blueprint $table )
 		{
 			$table->bigInteger( 'city_id' )
-				  ->unique()
+				  ->index()
 			;
 			$table->bigInteger( 'region_id' )
 				  ->index()
