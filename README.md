@@ -1,6 +1,6 @@
 # vk-geo-collector
 
-Collect GEO data from social networf VKontakte: Countries, Regions, Cities, etc
+Collect GEO data from social network VKontakte: Countries, Regions, Cities, etc
 
 ## Installation
 
@@ -46,8 +46,8 @@ php artisan migrate
 ```sh
 php artisan vk-geo-collector:update 0
 ```
-This command will query VK for Worldwide Countries / Regions / Cities, and insert into database.
-If local pair id-title is identical, this pair will be skipped (useful for updating the local database).
+This command will query VK for Worldwide Countries / Regions / Cities, and insert response data into database.
+If local id-title pair is identical, this pair will be skipped (useful for updating the local database).
 
 ### Languages:
 
