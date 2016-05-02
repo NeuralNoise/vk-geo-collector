@@ -1,0 +1,39 @@
+{
+	"name":"h-zone/vk-geo-collector",
+	"description":"Collect GEO data from social network VKontakte: Countries, Regions, Cities, etc.",
+	"keywords":[
+		"h-zone",
+		"hzone",
+		"vk-geo-collector",
+		"geo-collector",
+		"vk-geo"
+	],
+	"type":"library",
+	"license":"MIT",
+	"homepage":"https://github.com/h-zone/vk-geo-collector",
+	"authors":[
+		{
+			"name":"Stanislav Kabin",
+			"email":"me@h-zone.ru"
+		}
+	],
+	"minimum-stability":"dev",
+	"extra":{
+		"branch-alias":{
+			"dev-master":"0.1-dev"
+		}
+	},
+	"autoload":{
+		"psr-4":{
+			"Hzone\\CleanupCommands\\":"src/"
+		}
+	},
+	"autoload-dev":{
+		"psr-4":{
+			"Hzone\\CleanupCommands\\":"src/"
+		}
+	}
+	"require":{
+		"php":">=5.6.0"
+	}
+}
