@@ -85,8 +85,7 @@ If local pair id-title is identical, this pair will be skipped (useful for updat
 
 ### Ref.Docs:
 
-https://vk.com/dev/database
-https://vk.com/dev/database.getCountries
-https://vk.com/dev/database.getRegions
-https://vk.com/dev/database.getCities
-
+* https://vk.com/dev/database
+* https://vk.com/dev/database.getCountries
+* https://vk.com/dev/database.getRegions
+* https://vk.com/dev/database.getCities
