@@ -14,7 +14,12 @@ class VkGeoCollectorServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+		$this->publishes([
+			__DIR__.'/../config/vkgc.php' => config_path('vkgc.php'),
+		], 'config');
+		$this->publishes([
+			__DIR__.'/../database/migrations/' => database_path('/migrations')
+		], 'migrations');
     }
 
     /**
