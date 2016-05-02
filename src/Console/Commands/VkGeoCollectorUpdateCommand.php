@@ -314,54 +314,6 @@ class VkGeoCollectorUpdateCommand extends Command
 		 */
 	}
 
-	protected function updateCollectionDB()
-	{
-		$this->info( 'Updating Collection...' );
-		if ( $this->progressbarStarted == false )
-		{
-			$this->output->progressStart( $this->status[ 'countries' ][ 'collected' ] + $this->status[ 'regions' ][ 'collected' ] + $this->status[ 'cities' ][ 'collected' ] );
-			$this->progressbarStarted = true;
-		}
-		if ( !empty( $this->collection ) )
-		{
-			foreach ( $this->collection as $country_id => $country )
-			{
-				$this->updateCountryDB( $country_id, $country );
-				if ( $this->progressbarStarted == true )
-				{
-					$this->output->progressAdvance( 1 );
-				}
-				if ( !empty( $country[ 'regions' ] ) )
-				{
-					foreach ( $country[ 'regions' ] as $region_id => $region )
-					{
-						$this->updateRegionDB( $region_id, $country_id, $region );
-						if ( $this->progressbarStarted == true )
-						{
-							$this->output->progressAdvance( 1 );
-						}
-						if ( !empty( $region[ 'cities' ] ) )
-						{
-							foreach ( $region[ 'cities' ] as $city_id => $city )
-							{
-								$this->updateCityDB( $city_id, $region_id, $country_id, $city );
-								if ( $this->progressbarStarted == true )
-								{
-									$this->output->progressAdvance( 1 );
-								}
-							}
-						}
-					}
-				}
-			}
-		}
-		if ( $this->progressbarStarted == true )
-		{
-			$this->output->progressFinish();
-			$this->progressbarStarted = false;
-		}
-	}
-
 	protected function updateCountryDB( $country_id, $country )
 	{
 		$Country = Country::where( 'country_id', '=', $country_id )
@@ -449,17 +401,17 @@ class VkGeoCollectorUpdateCommand extends Command
 			{
 				$City->title = $city[ 'title' ];
 				$City->save();
-				$this->status[ 'regions' ][ 'updated' ]++;
+				$this->status[ 'cities' ][ 'updated' ]++;
 			}
 			elseif ( $City->area !== $city[ 'area' ] )
 			{
 				$City->area = $city[ 'area' ];
 				$City->save();
-				$this->status[ 'regions' ][ 'updated' ]++;
+				$this->status[ 'cities' ][ 'updated' ]++;
 			}
 			else
 			{
-				$this->status[ 'regions' ][ 'skipped' ]++;
+				$this->status[ 'cities' ][ 'skipped' ]++;
 			}
 		}
 		else
@@ -474,7 +426,7 @@ class VkGeoCollectorUpdateCommand extends Command
 					? $city[ 'area' ]
 					: null,
 			] );
-			$this->status[ 'regions' ][ 'new' ]++;
+			$this->status[ 'cities' ][ 'new' ]++;
 		}
 	}
 
