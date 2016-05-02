@@ -36,13 +36,13 @@ $app->register(Hzone\VkGeoCollector\VkGeoCollectorServiceProvider::class);
 ```
 
 ### Both Lumen and Laravel
-(!!! manually !!!)
-Take the migrations from /vendor/h-zone/vk-geo-collector/database/migrations and apply it.
-Take the configuration from /vendor/h-zone/vk-geo-collector/config
+```
+php artisan vendor:publish --provider="Hzone/VkGeoCollector/VkGeoCollectorServiceProvider"
+```
 
 ## Usage
 ```sh
-php artisan vk-geo-collector:update --lang=0
+php artisan vk-geo-collector:update 0
 ```
 This command will query VK for Worldwide Countries / Regions / Cities, and insert into database.
 If local pair id-title is identical, this pair will be skipped (useful for updating the local database).
