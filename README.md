@@ -1,4 +1,4 @@
-# vk-update-geo
+# vk-geo-collector
 
 Collect GEO data from social networf VKontakte: Countries, Regions, Cities, etc
 
