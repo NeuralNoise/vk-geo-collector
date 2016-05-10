@@ -8,14 +8,14 @@ WARNING! Regions is not supported anymore!
 ### composer
 
 ```bash
-composer require h-zone/vk-geo-collector:~0.2
+composer require h-zone/vk-geo-collector:^0.2.0.0
 ```
 
 or
 
 `composer.json`
 ```json
-"h-zone/vk-geo-collector": "~0.2"
+"h-zone/vk-geo-collector": "^0.2.0.0"
 ```
 
 ### Lumen

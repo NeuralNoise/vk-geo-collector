@@ -17,10 +17,10 @@
 			"email":"me@h-zone.ru"
 		}
 	],
-	"minimum-stability":"stable",
+	"minimum-stability":"dev",
 	"extra":{
 		"branch-alias":{
-			"dev-master":"0.2.0.0-dev"
+			"dev-master":"0.2"
 		}
 	},
 	"autoload":{
