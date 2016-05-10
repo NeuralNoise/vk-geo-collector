@@ -1,6 +1,6 @@
 # vk-geo-collector
 
-Collect GEO data from social networf VKontakte: Countries, Cities.
+Collect GEO data from social networf VKontakte: Countries, Cities<br>
 WARNING! Regions is not supported anymore!
 
 ## Installation
