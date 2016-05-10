@@ -17,10 +17,6 @@ class CreateVkGeoCitiesTable extends Migration
 			$table->bigInteger( 'city_id' )
 				  ->index()
 			;
-			$table->bigInteger( 'region_id' )
-				  ->index()
-				  ->nullable()
-			;
 			$table->bigInteger( 'country_id' )
 				  ->index()
 			;

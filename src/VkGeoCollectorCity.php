@@ -9,7 +9,6 @@ class VkGeoCollectorCity extends Model
 	protected $table        = 'vk_geo_cities';
 	protected $fillable     = [
 		'city_id',
-		'region_id',
 		'country_id',
 		'lang',
 		'title',

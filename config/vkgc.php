@@ -44,17 +44,6 @@ return [
 			'offset'   => 0,
 		],
 	],
-	'region'    => [
-		'url'    => 'http://api.vk.com/method/database.getRegions?',
-		'params' => [
-			'v'          => '5.5',
-			'need_all'   => 1,
-			'count'      => 1000,
-			'lang'       => null,
-			'offset'     => 0,
-			'country_id' => null,
-		],
-	],
 	'city'      => [
 		'url'    => 'http://api.vk.com/method/database.getCities?',
 		'params' => [

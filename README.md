@@ -1,20 +1,21 @@
 # vk-geo-collector
 
-Collect GEO data from social networf VKontakte: Countries, Regions, Cities, etc
+Collect GEO data from social networf VKontakte: Countries, Cities.
+WARNING! Regions is not supported anymore!
 
 ## Installation
 
 ### composer
 
 ```bash
-composer require h-zone/vk-geo-collector:~0.1-dev
+composer require h-zone/vk-geo-collector:~0.2
 ```
 
 or
 
 `composer.json`
 ```json
-"h-zone/vk-geo-collector": "~0.1-dev"
+"h-zone/vk-geo-collector": "~0.2"
 ```
 
 ### Lumen
@@ -46,8 +47,8 @@ php artisan migrate
 ```sh
 php artisan vk-geo-collector:update 0
 ```
-This command will query VK for Worldwide Countries / Regions / Cities, and insert into database.
-If local pair id-title is identical, this pair will be skipped (useful for updating the local database).
+This command will query VK for Worldwide Countries / Cities on desired languande (zero as param), then insert these data into database.
+If local pair id-title is identical, this pair will be skipped (useful for update-checks the local database).
 
 ### Languages:
 
@@ -87,5 +88,4 @@ If local pair id-title is identical, this pair will be skipped (useful for updat
 
 * https://vk.com/dev/database
 * https://vk.com/dev/database.getCountries
-* https://vk.com/dev/database.getRegions
 * https://vk.com/dev/database.getCities
