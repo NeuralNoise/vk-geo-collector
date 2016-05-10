@@ -17,7 +17,7 @@
 			"email":"me@h-zone.ru"
 		}
 	],
-	"minimum-stability":"dev",
+	"minimum-stability":"stable",
 	"extra":{
 		"branch-alias":{
 			"master":"0.2"
