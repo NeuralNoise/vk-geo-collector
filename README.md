@@ -1,3 +1,7 @@
+# Support package is not carried out.
+# VK made a lot of changes, and there is no time to follow them.
+# You can contact me and I will give the rights to rework the package.
+
 # vk-geo-collector
 
 Collect GEO data from social networf VKontakte: Countries, Cities<br>
