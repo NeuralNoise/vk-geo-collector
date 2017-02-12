@@ -1,4 +1,4 @@
-# Support package is not carried out.
+# Support is not carried out anymore.
 VK made a lot of changes, and there is no time to follow them.<br />
 You can contact me and I will give the rights to rework the package.
 
